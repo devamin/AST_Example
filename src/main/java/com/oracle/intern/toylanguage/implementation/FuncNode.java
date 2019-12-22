@@ -10,7 +10,7 @@ import java.util.Optional;
 
 import com.oracle.intern.toylanguage.abstraction.Node;
 import com.oracle.intern.toylanguage.implementation.helpers.PrintHelper;
-import com.oracle.intern.toylanguage.implementation.optimisation.ForStatementCleaner;
+import com.oracle.intern.toylanguage.implementation.optimisation.ForStatementOptimiserHelper;
 import com.oracle.intern.toylanguage.implementation.statement.DeclarationStatement;
 import com.oracle.intern.toylanguage.implementation.statement.ForStatement;
 import com.oracle.intern.toylanguage.implementation.statement.Reference;
@@ -40,8 +40,10 @@ public class FuncNode implements Node {
 		return this.memory;
 	}
 
-	public boolean isTerminal() {
-		return false;
+	
+
+	public List<Node> getListOfInstruction() {
+		return listOfInstruction;
 	}
 
 	public void setListOfInstruction(List<Node> listOfInstruction) {
@@ -139,11 +141,12 @@ public class FuncNode implements Node {
 		Reference.clearReferences();
 		
 		locateArgsToMemory();
-		ForStatementCleaner.clear();
+		ForStatementOptimiserHelper.clear();
 		
 		for(Node inst : listOfInstruction) {
 			inst.clear();
 		}
+		
 	}
 
 	private void setArgsInCalling(int args[]) {
@@ -234,8 +237,8 @@ public class FuncNode implements Node {
 					for2Index = i;
 				}
 
-				if (ForStatementCleaner.canWeMergeForStatments((ForStatement) listOfInstruction.get(i))
-						&& ForStatementCleaner.doesTheBlockAboveAffectIt(blockInBetween)) {
+				if (ForStatementOptimiserHelper.canWeMergeForStatments((ForStatement) listOfInstruction.get(i))
+						&& ForStatementOptimiserHelper.doesTheBlockAboveAffectIt(blockInBetween)) {
 
 					ForStatement firstFor = (ForStatement) listOfInstruction.get(for1Index);
 					ForStatement secondFor = (ForStatement) listOfInstruction.get(for2Index);

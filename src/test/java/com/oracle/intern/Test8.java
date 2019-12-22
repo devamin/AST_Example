@@ -6,7 +6,7 @@
  * 	Assignement 5 : More advanced Optimisation
  *   
  *   
-		function test7(a, b) {
+		function test8(a, b) {
 			val result1;
 			result1 = 0;
 			val result2;
@@ -72,7 +72,7 @@ import com.oracle.intern.toylanguage.implementation.statement.ReturnStatement;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class Test8 {
 
-	private FuncNode funcNode = new FuncNode("test5", "a", "b");
+	private FuncNode funcNode = new FuncNode("test8", "a", "b");
 
 	private List<Node> getListOfInstructionBeforeOptimisation() {
 		ArrayList<Node> listOfInst = new ArrayList<>();
@@ -169,7 +169,6 @@ class Test8 {
 	@Test
 	@Order(4)
 	void executionTest() {
-		// value for test6(5) == 1337+5 = 1342
 		int expected = generatedJavatest(5, 5);
 
 		setAsNeverOptimized();

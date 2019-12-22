@@ -13,7 +13,7 @@
 				result1 = result1 + a;
 			}
 			for (i2: 0...b) {
-				result2 = result2 + result1;
+				result2 = result2 + a;
 			}
 			return result1 + result2;
 		}
@@ -40,6 +40,7 @@
  *	/test 4 : AssertionEqual(ExpectedValue, ActualBeforeOpt && ActualAfterOpt)
  * 
  * */
+
 
 package com.oracle.intern;
 
@@ -70,7 +71,7 @@ import com.oracle.intern.toylanguage.implementation.statement.ReturnStatement;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class Test99_10 {
 
-	private FuncNode funcNode = new FuncNode("test5", "a", "b");
+	private FuncNode funcNode = new FuncNode("test10", "a", "b");
 
 	private List<Node> getListOfInstructionBeforeOptimisation() {
 		ArrayList<Node> listOfInst = new ArrayList<>();
@@ -185,22 +186,22 @@ class Test99_10 {
 	public static int generatedJavatest(int a,int b){
 		//before Optimisation
 		//exactly same as the input ToyCode coded in java
-		int result1;
-		result1 = 0;
-		int result2;
-		result2 = 0;
-		for(int i1=0;i1<a;i1++){
 
-			result1 = result1+a;
+			int result1;
+			result1 = 0;
+			int result2;
+			result2 = 0;
+			for(int i1=0;i1<a;i1++){
 
-		}
-		for(int i2=0;i2<b;i2++){
+				result1 = result1+a;
 
-			result2 = result2+result1;
+			}
+			for(int i2=0;i2<b;i2++){
 
-		}
-		return result1+result2;
+				result2 = result2+result1;
 
+			}
+			return result1+result2;
 	}
 
 }

@@ -70,7 +70,7 @@ import com.oracle.intern.toylanguage.implementation.statement.ReturnStatement;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class Test7 {
 
-	private FuncNode funcNode = new FuncNode("test5", "a", "b");
+	private FuncNode funcNode = new FuncNode("test7", "a", "b");
 
 	private List<Node> getListOfInstructionBeforeOptimisation() {
 		ArrayList<Node> listOfInst = new ArrayList<>();
@@ -157,7 +157,6 @@ class Test7 {
 	@Test
 	@Order(4)
 	void executionTest() {
-		// value for test6(5) == 1337+5 = 1342
 		int expected = generatedJavatest(5, 5);
 
 		setAsNeverOptimized();

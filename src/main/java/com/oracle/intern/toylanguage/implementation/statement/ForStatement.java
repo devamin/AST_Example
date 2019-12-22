@@ -4,11 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import com.oracle.intern.toylanguage.abstraction.Node;
+import com.oracle.intern.toylanguage.abstraction.Statement;
 import com.oracle.intern.toylanguage.implementation.helpers.PrintHelper;
-import com.oracle.intern.toylanguage.implementation.optimisation.ForStatementCleaner;
+import com.oracle.intern.toylanguage.implementation.optimisation.ForStatementOptimiserHelper;
 
 
-public class ForStatement implements Node{
+public class ForStatement implements Node,Statement{
 	
 	private DeclarationStatement iterator;
 	private Node from;
@@ -155,11 +156,14 @@ public class ForStatement implements Node{
 	@Override
 	public List<String> optimize(List<String> list) {
 		// TODO Auto-generated method stub
-//		for(int i=this.block.size()-1;i>=0;i--) {
-//			if(this.block.get(i).optimize(list)==null) {
-//				this.block.remove(i);
-//			}
-//		}
+		
+		if(this.to instanceof Reference) {
+			this.to.optimize(list);
+		}
+		if(this.from instanceof Reference) {
+			this.from.optimize(list);
+		}
+		
 		for(int i=0;i<block.size();i++) {
 			if(this.block.get(i).optimize(list)==null) {
 				this.block.remove(i);

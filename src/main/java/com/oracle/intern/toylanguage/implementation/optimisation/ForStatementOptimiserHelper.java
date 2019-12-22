@@ -9,15 +9,15 @@ import com.oracle.intern.toylanguage.abstraction.Node;
 import com.oracle.intern.toylanguage.implementation.statement.AssignStatement;
 import com.oracle.intern.toylanguage.implementation.statement.ForStatement;
 
-public class ForStatementCleaner {
+public class ForStatementOptimiserHelper {
 
 	private ArrayList<String> used = new ArrayList<String>();
 	private ArrayList<String> assigned = new ArrayList<String>();
 	private ForStatement forStatement;
-	private static ForStatementCleaner for1 = null;
-	private static ForStatementCleaner for2 = null;
+	private static ForStatementOptimiserHelper for1 = null;
+	private static ForStatementOptimiserHelper for2 = null;
 
-	private ForStatementCleaner(ForStatement forStatment) {
+	private ForStatementOptimiserHelper(ForStatement forStatment) {
 		this.forStatement = forStatment;
 		List<Node> block = forStatment.getBlock();
 		for (int i = 0; i < block.size(); i++) {
@@ -66,10 +66,10 @@ public class ForStatementCleaner {
 	
 	public static boolean canWeMergeForStatments(ForStatement forStatment1) {
 		if (for1 == null) {
-			for1 = new ForStatementCleaner(forStatment1);
+			for1 = new ForStatementOptimiserHelper(forStatment1);
 			return false;
 		} else {
-			for2 = new ForStatementCleaner(forStatment1);
+			for2 = new ForStatementOptimiserHelper(forStatment1);
 			// let's merge if we can
 
 			// check the start and the end

@@ -4,9 +4,10 @@ import java.util.List;
 import java.util.Optional;
 
 import com.oracle.intern.toylanguage.abstraction.Node;
+import com.oracle.intern.toylanguage.abstraction.Statement;
 import com.oracle.intern.toylanguage.implementation.helpers.PrintHelper;
 
-public class Literal implements Node{
+public class Literal implements Node,Statement{
 	private int value;	
 
 	public Literal(int value) {
