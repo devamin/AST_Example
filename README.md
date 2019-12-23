@@ -143,7 +143,7 @@ the result is printed in the console and it was like this :
   
 
 
--   **the java code generated before :**
+-   **the java code generated before Optimisation:**
 
   
 
