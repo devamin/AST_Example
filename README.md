@@ -51,27 +51,6 @@ This project created by Maven on Eclipse IDE, I tried to organize the structure 
 
 Unit Test Folder contain all test case mentioned in the assignment, I added an advanced test contain almost all functionality, I commented all Test case in the top of the document please try to read it.
 
-  
-
-
-![](https://lh6.googleusercontent.com/z7rE4bIVhagN7jQylGp58p4bxVizk3FBDdETfxGuyjQi0Kk9JEOzanG9He0vS5fMoGWDphxlxkDoXjcVEI-pcuRShgvtnZC9d_xHZW1ji8KDFLzTKw3TdUrqYY4fJKQm1L28J0b1)
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
 
 4 - Summarized test
 
