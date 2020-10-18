@@ -7,18 +7,6 @@
 5- Summarized test
 
   
-  
-
-
-I- Introduction
-
-  
-
-
-First before start I would like to thank you for giving me this opportunity to test my skills and try something which is new to me like compilers and AST data structure. I almost did my best compared to my free time, this work has been done in 5 days. thank you for your consideration and your time.
-
-  
-
 
 2- Software design
 
