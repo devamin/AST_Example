@@ -1,18 +1,3 @@
-1- Introduction
-
-2- Software Design
-
-3- Project Structure
-
-5- Summarized test
-
-  
-
-2- Software design
-
-  
-
-
 I used java as a programming language to implement this task, I took advantage of the language and I based my software design by applying inheritance on my Nodes in the AST. and defining after each specification of each NodeType. This diagram has lot to say.
 
   
@@ -74,7 +59,7 @@ return r1+r3+r1;
   
 
 
-1- step : i formed the AST by hand in the method getListOfInstructionBeforeOptimisation()
+1- step : i formed the AST by the method getListOfInstructionBeforeOptimisation()
 
   
 
@@ -84,7 +69,7 @@ return r1+r3+r1;
   
 
 
-3- test : I ran the Clean and OptimiseLoops code & I printed the generated code in the console .
+3- test : I run the Clean and OptimiseLoops code & I printed the generated code in the console .
 
   
 
