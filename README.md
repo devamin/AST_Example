@@ -14,8 +14,7 @@ This design helped me alot to apply the cleaning and optimisation feature easily
   
   
 
-
-3- Project Structure
+## Project Structure
 
   
 
@@ -25,7 +24,7 @@ This project created by Maven on Eclipse IDE, I tried to organize the structure 
 Unit Test Folder contain all test case mentioned in the assignment, I added an advanced test contain almost all functionality, I commented all Test case in the top of the document please try to read it.
 
 
-4 - Summarized test
+## Summarized test
 
   
 
