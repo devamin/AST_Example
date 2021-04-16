@@ -1,4 +1,4 @@
-I used java as a programming language to implement this task, I took advantage of the language and I based my software design by applying inheritance on my Nodes in the AST. and defining after each specification of each NodeType. This diagram has lot to say.
+I used java as a programming language to implement this project, I took advantage of the language and I based my software design by applying inheritance on my Nodes in the AST. and defining after each specification of each NodeType. This diagram has lot to say.
 
   
 
